@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  dev:
+    container_name: dev
+    build: ./.devcontainer
+    volumes:
+    - .//:/vscode_dev
+    - ./php.ini:/usr/local/etc/php/php.ini
+    ports:
+    - 8000:8000
+
+  mysql:
+    container_name: db
+    image: mariadb:10.4.5
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=develop
+    - MYSQL_USER=develop
+    - MYSQL_PASSWORD=develop
+    - TZ='Asia/Tokyo'
+    ports:
+    - 3306:3306
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci

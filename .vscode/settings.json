@@ -1,0 +1,69 @@
+{
+  /*
+  エディタ系設定
+  */
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.tabSize": 2, // タブ幅2 各言語ごとに設定する場合有
+  "editor.fontSize": 14, // フォントサイズを14に
+  "files.eol": "\n", // デフォルトの改行コードをLFに設定
+  "editor.detectIndentation": false, // 開いたファイルに基づいて、タブサイズ等が設定されてしまうのでfalse
+  "editor.renderWhitespace": "all", // 単語間のスペースを表示
+  "editor.insertSpaces": true, // タブの代わりにスペースを挿入する
+  "editor.cursorStyle": "line", // カーソルの表示をライン表示にする
+  "editor.wordWrap": "off", // 長文を折り返すかどうか
+  "editor.rulers": [
+    80,
+    120
+  ], // 文字数のライン表示
+  "editor.formatOnSave": false, // 保存時に自動でフォーマットしないようにする
+  "editor.minimap.enabled": false, // ミニマップを非表示にする
+  "files.autoGuessEncoding": true, // 自動エンコードする
+  "files.trimTrailingWhitespace": true, // 保存時に末尾のスペース削除する
+  "files.trimFinalNewlines": true, // 保存時に末尾が改行で終わっていない場合、改行を挿入する
+  "explorer.confirmDelete": true, // ファイルを削除するときに、確認する
+  "window.zoomLevel": 0,
+  "explorer.confirmDragAndDrop": true, // ファイルをドラッグ＆ドロップするときに、確認する
+  "terminal.integrated.rendererType": "dom",
+  /*
+  各言語ごとの設定
+  */
+  "[php]": {
+    "editor.tabSize": 4, // タブ幅2 各言語ごとに設定する場合有
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  /*
+  拡張機能設定
+  */
+  "blade.format.enable": true,
+  "emmet.triggerExpansionOnTab": true,
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json",
+        "jsonc"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautifyrc"
+      ]
+    },
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "blade"
+    ]
+  },
+}
